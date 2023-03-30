@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProductCard, SearchBar, PreviewCart, productCart } from './interfaces/Interfaces';
+import { ProductCard, SearchBar, PreviewCart, productCart, payment } from './interfaces/Interfaces';
 
 @Component({
   selector: 'app-root',
@@ -30,7 +30,12 @@ export class AppComponent {
     price:"30€",
     productName:"Camiseta de manga corta facil de vestir color rojo y marron"
   }
-  
+  dataPayment:payment={
+    amount:10,
+    price:"20€",
+    class:"",
+    link:"https://twitter.com"
+  }
   ngOnInit(){
     this.products.push(this.product)
     this.products.push(this.product)

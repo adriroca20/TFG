@@ -6,7 +6,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./search-bar.component.css']
 })
 export class SearchBarComponent {
-  categoriasMostradas:boolean= false;
+
+categoriasMostradas:boolean= false;
 @Input() setData!:any;
 @Output() getData =  new EventEmitter<any>();
 dataToEmit:any={

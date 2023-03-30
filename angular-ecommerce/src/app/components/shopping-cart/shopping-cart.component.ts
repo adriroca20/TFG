@@ -1,17 +1,18 @@
 import { Component, Input, Output, EventEmitter,OnInit} from '@angular/core';
-import { PreviewCart } from 'src/app/interfaces/Interfaces';
+import { Cart } from 'src/app/interfaces/Interfaces';
+
 @Component({
-  selector: 'app-preview-cart',
-  templateUrl: './preview-cart.component.html',
-  styleUrls: ['./preview-cart.component.css']
+  selector: 'app-shopping-cart',
+  templateUrl: './shopping-cart.component.html',
+  styleUrls: ['./shopping-cart.component.css']
 })
-export class PreviewCartComponent {
+export class ShoppingCartComponent {
   @Input()
-  setData!:PreviewCart;
+  setData!:Cart;
   @Output()
   dataEmitter = new EventEmitter<any>();
   cantidad:Array<number>= []
-  dataToEmit!:PreviewCart;
+  dataToEmit!:Cart;
   ngOnInit(){
      this.setData.products.forEach(product => {
         this.cantidad.push(product.amount)

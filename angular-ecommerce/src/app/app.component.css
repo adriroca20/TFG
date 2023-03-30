@@ -6,6 +6,7 @@
     align-items: center;
     gap: 50px;
     flex-direction: column;
+    padding-top: 5vh;
 }
 .boton{
     height: 200px;

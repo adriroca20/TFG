@@ -1,0 +1,34 @@
+.payment-container{
+    height: 300px;
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 5px 5px 20px black;
+}
+.payment-section{
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    width: 100%;
+}
+.payment-section hr{
+    width: 50%;
+}
+.payment-container a{
+    text-decoration: none;
+    border: 1px solid black;
+    background-color: transparent;
+    color: #148EFF;
+    border-radius: 20px;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.payment-container a:hover{
+    background-color: #148EFF;
+    color: white;
+}

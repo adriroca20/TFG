@@ -9,6 +9,10 @@ interface SearchBar{
     class: string,
     categories: Array<string>
 }
+interface Cart{
+    class:string,
+    products:Array<productCart>
+}
 interface PreviewCart{
     class:string,
     products:Array<productCart>
@@ -21,4 +25,10 @@ interface productCart{
     link:string,
     amount:number
 }
-export {ProductCard,SearchBar,PreviewCart,productCart}
+interface payment{
+    class:string,
+    link:string,
+    amount:number
+    price:string,
+}
+export {ProductCard,SearchBar,PreviewCart,productCart, payment,Cart}
