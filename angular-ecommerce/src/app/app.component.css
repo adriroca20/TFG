@@ -1,0 +1,13 @@
+#productos{
+    min-height: 50vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-direction: column;
+}
+.boton{
+    height: 200px;
+    width: 200px;
+}

@@ -1,0 +1,11 @@
+<div class="search-bar-container">
+    <input type="text" class="search-bar" placeholder="Search..." #inputSearch>
+    <button type="button" class="categories-button" (click)="mostrarCategorias()">Categories</button>
+    <div class="categories-container" [ngClass]="categoriasMostradas ? 'show' : 'hide'">
+        <div class="category" *ngFor="let category of setData.categories">
+            <input  [value]="category" type="checkbox">
+            <label [for]="category">{{category}}</label>
+        </div>
+    </div>
+    <button type="button" class="button-search-bar" (click)="sendData(inputSearch)"><img src="../../../assets/lupa.png" alt=""></button>
+</div>

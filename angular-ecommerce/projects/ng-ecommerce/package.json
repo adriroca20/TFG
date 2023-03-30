@@ -1,0 +1,17 @@
+{
+  "name": "ng-ecommerce",
+  "version": "0.0.1",
+  "description": "This is an Angular component library that will help you creating new e-commerce websites",
+  "author": {
+    "name": "Adrian Rocafull",
+    "email": "adrianrocafull1@gmail.com",
+    "url": "https://adrianrocafull.onrender.com"
+  },
+  "peerDependencies": {
+    "@angular/common": "^15.0.0",
+    "@angular/core": "^15.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

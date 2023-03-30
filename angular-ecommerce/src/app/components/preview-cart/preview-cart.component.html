@@ -1,0 +1,26 @@
+<div class="contenedor-preview-cesta">
+    <h1>Cart</h1>
+    <hr>
+    <div *ngFor="let product of setData.products; let i=index" class="contenedor-producto-cesta">
+        <img [src]="product.image" alt="image-product">
+        <div class="contenedor-datos-producto-cesta">
+            <a [href]="product.link">{{product.productName}}</a>
+            <div class="seccion-prod-cesta">
+                <div class="present">
+                    <input  name="present" type="checkbox">
+                    <label for="present">Present</label>
+                </div>
+                <button class="boton-eliminar"><img src="../../../assets/trash.svg" alt="">Delete</button>
+            </div>
+            <div class="seccion-prod-cesta">
+                <div class="selector-cantidad">
+                    <button (click)="menosCantidad(i)">-</button>
+                    <p>{{cantidad[i]}}</p>
+                    <button (click)="masCantidad(i)">+</button>
+                </div>
+                <p class="precio-articulo">{{product.price}}</p>
+            </div>
+        </div>
+    </div>
+    <button class="proceed-to-payment" (click)="emitData()">Proceed to payment</button>
+</div>

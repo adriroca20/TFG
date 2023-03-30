@@ -1,0 +1,18 @@
+.card-container{
+    border: 1px solid black;
+    background-color: white ;
+}
+
+.sm-product-card{
+    height: 100px;
+    width: 200px;
+}
+.md-product-card{
+    height: 400px;
+    width: 500px;
+}
+
+.bg-product-card{
+    height: 500px;
+    width: 600px;
+}
