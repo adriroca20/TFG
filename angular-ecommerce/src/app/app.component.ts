@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProductCard, SearchBar, PreviewCart, productCart, payment } from './interfaces/Interfaces';
+import { ProductCard, SearchBar, PreviewCart, productCart, payment,PreviewProductCart } from './interfaces/Interfaces';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,7 @@ import { ProductCard, SearchBar, PreviewCart, productCart, payment } from './int
 })
 export class AppComponent {
 
-  products:Array<productCart> = []
+  products:Array<PreviewProductCart> = []
 
   datosProduct:ProductCard={
     class:"md-product-card",
@@ -21,21 +21,20 @@ export class AppComponent {
     class: "",
     categories:["zapatillas","sudaderas","pantalones","camisas"]
   }
-
-  product:productCart= {
-    amount:3,
-    class:"",
-    image:"../../../assets/imagen-producto.png",
-    link:"https://twitter.com",
-    price:"30€",
-    productName:"Camiseta de manga corta facil de vestir color rojo y marron"
-  }
   dataPayment:payment={
     amount:10,
     price:"20€",
     class:"",
     link:"https://twitter.com"
   }
+
+  product:PreviewProductCart= {
+    amount:3,
+    image:"../../../assets/imagen-producto.png",
+    link:"https://twitter.com",
+    price:"30€"
+  }
+
   ngOnInit(){
     this.products.push(this.product)
     this.products.push(this.product)
@@ -43,13 +42,9 @@ export class AppComponent {
     this.products.push(this.product)
     this.products.push(this.product)
   }
-
+  
   dataPreviewCart:PreviewCart={
     class:"",
     products:this.products
    }
-  datosRecibidos!:any;
-  showData(){
-    console.log(this.datosRecibidos)
-  }
 }

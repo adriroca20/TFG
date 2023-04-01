@@ -36,11 +36,12 @@ export class PreviewCartComponent {
 
   }
   menosCantidad(i:number){
-    if(this.cantidad[i]>0){
+    if(this.cantidad[i]>1){
       this.cantidad[i]-=1;
     }
   }
   eliminarProducto(i:number){
     this.setData.products.splice(i,1)
   }
+  
 }
