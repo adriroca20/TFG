@@ -18,8 +18,8 @@ dataToEmit:any={
     this.dataToEmit.category= this.setData.categories[0];
   }
   sendData(search:any){
+    this.categoriasMostradas=false;
     this.dataToEmit.searchText=search.value;
-    console.log(this.dataToEmit);
     this.getData.emit(this.dataToEmit);
   }
   setCategory(event:any){

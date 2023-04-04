@@ -29,6 +29,7 @@ interface productCart{
 }
 interface PreviewCart{
     class:string,
+    total:string,
     products:Array<PreviewProductCart>
 }
 interface PreviewProductCart{

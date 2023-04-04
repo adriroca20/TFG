@@ -18,22 +18,19 @@ export class PreviewCartComponent {
      });
      this.dataToEmit={
       class:this.setData.class,
+      total:this.setData.total,
       products:this.setData.products
     }
   }
   sendData(){
     this.dataToEmit.products= this.setData.products
     this.dataToEmit.products.forEach((product,i) => {
-      console.log(this.cantidad[i])
       product.amount=this.cantidad[i]
    });
-    console.log(this.setData)
-    this.dataEmitter.emit(this.setData);
+    this.dataEmitter.emit(this.dataToEmit);
   }
   masCantidad(i:number){
     this.cantidad[i]+=1;
-    // console.log(this.cantidad)
-
   }
   menosCantidad(i:number){
     if(this.cantidad[i]>1){

@@ -2,9 +2,9 @@
     <div class="precio-total-preview">
         <p>Total</p>
         <hr>
-        <p>60€</p>
+        <p>{{setData.total}}</p>
     </div>
-    <a href="" (click)="sendData()">Pay now</a>
+    <a href="" (click)="sendData()" target="_blank">Pay now</a>
     <hr>
     <div *ngFor="let product of setData.products; let i=index" class="contenedor-producto-cesta">
         <a [href]="product.link"><img [src]="product.image" alt="image-product"></a>

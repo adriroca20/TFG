@@ -8,10 +8,4 @@ import { payment } from 'src/app/interfaces/Interfaces';
 export class PaymentComponent {
   @Input() setData!:payment;
   @Output() getData =  new EventEmitter<any>();
-
-  ngOnInit(){
-  }
-  sendData(){
-    
-  }
 }

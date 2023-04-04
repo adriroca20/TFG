@@ -56,11 +56,24 @@ export class AppComponent {
   
   dataPreviewCart:PreviewCart={
     class:"sm",
+    total:"60€",
     products:this.products
   }
   
    dataImageGallery:imageGallery={
     class:"",
     images:this.dataImages
+   }
+   getDataProduct(event:any){
+    console.log(event)
+   }
+   getDataPreview(event:any){
+    console.log(event)
+   }
+   getDataSearch(event:any){
+    console.log(event)
+   }
+   getDataShopping(event:any){
+    console.log(event)
    }
 }
