@@ -1,16 +1,6 @@
-/* SMALL SICE */
-.image-gallery-container.sm{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 350px;
-    height: 350px;
-    background-color: white;
-    border: 1px solid black;
-}
 /* LARGE SICE */
 
-.image-gallery-container.lg{
+.image-gallery-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,4 +44,14 @@
     pointer-events: none;
 }
 
-
+@media (max-width: 600px){
+    .image-gallery-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 350px;
+        height: 350px;
+        background-color: white;
+        border: 1px solid black;
+    }
+}

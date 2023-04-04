@@ -11,7 +11,7 @@ export class AppComponent {
   products:Array<PreviewProductCart> = []
 
   datosProduct:ProductCard={
-    class:"md-product-card",
+    class:"",
     name: "CAMISETA NIKE",
     price: "100€",
     image:"../../../assets/imagen-producto.png",
@@ -60,7 +60,7 @@ export class AppComponent {
   }
   
    dataImageGallery:imageGallery={
-    class:"sm",
+    class:"",
     images:this.dataImages
    }
 }

@@ -1,4 +1,4 @@
-<div class="search-bar-container">
+<div class="search-bar-container" [ngClass]="setData.class">
     <input type="text" class="search-bar" placeholder="Search..." #inputSearch>
     <button type="button" class="categories-button" (click)="mostrarCategorias()">Categories</button>
     <div class="categories-container" [ngClass]="categoriasMostradas ? 'show' : 'hide'">
