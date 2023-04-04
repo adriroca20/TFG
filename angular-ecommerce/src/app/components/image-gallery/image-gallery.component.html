@@ -1,4 +1,4 @@
-<div class="image-gallery-container">
+<div class="image-gallery-container" [ngClass]="setData.class">
     <div class="images-row">
         <button class="boton-lateral" *ngFor="let img of images; let i=index" (click)="setMainImage(i)"><img [src]="img"></button>
     </div>

@@ -1,4 +1,16 @@
-.image-gallery-container{
+/* SMALL SICE */
+.image-gallery-container.sm{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 350px;
+    height: 350px;
+    background-color: white;
+    border: 1px solid black;
+}
+/* LARGE SICE */
+
+.image-gallery-container.lg{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -7,6 +19,7 @@
     background-color: white;
     border: 1px solid black;
 }
+
 .images-row{
     display: flex;
     justify-content: start;
@@ -40,3 +53,5 @@
     height: 100%;
     pointer-events: none;
 }
+
+

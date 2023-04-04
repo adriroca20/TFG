@@ -55,12 +55,12 @@ export class AppComponent {
   }
   
   dataPreviewCart:PreviewCart={
-    class:"",
+    class:"sm",
     products:this.products
   }
   
    dataImageGallery:imageGallery={
-    class:"",
+    class:"sm",
     images:this.dataImages
    }
 }
