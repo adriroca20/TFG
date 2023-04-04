@@ -37,5 +37,8 @@ interface PreviewProductCart{
     link:string,
     amount:number
 }
-
-export {ProductCard,SearchBar,PreviewCart,productCart, payment,Cart,PreviewProductCart}
+interface imageGallery{
+    class:string,
+    images:Array<string>
+}
+export {ProductCard,SearchBar,PreviewCart,productCart, payment,Cart,PreviewProductCart,imageGallery}

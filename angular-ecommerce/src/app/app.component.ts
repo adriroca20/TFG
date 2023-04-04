@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProductCard, SearchBar, PreviewCart, productCart, payment,PreviewProductCart } from './interfaces/Interfaces';
+import { ProductCard, SearchBar, PreviewCart, imageGallery, payment,PreviewProductCart } from './interfaces/Interfaces';
 
 @Component({
   selector: 'app-root',
@@ -35,16 +35,32 @@ export class AppComponent {
     price:"30€"
   }
 
+  dataImages:Array<string>=[];
+  imageTest1:string="../../../assets/imagen-producto.png"
+  imageTest2:string="../../../assets/imagen-producto2.jpg"
+  imageTest3:string="../../../assets/imagen-producto3.jpg"
+
   ngOnInit(){
     this.products.push(this.product)
     this.products.push(this.product)
     this.products.push(this.product)
     this.products.push(this.product)
     this.products.push(this.product)
+
+    this.dataImages.push(this.imageTest1)
+    this.dataImages.push(this.imageTest2)
+    this.dataImages.push(this.imageTest3)
+    this.dataImages.push(this.imageTest3)
+
   }
   
   dataPreviewCart:PreviewCart={
     class:"",
     products:this.products
+  }
+  
+   dataImageGallery:imageGallery={
+    class:"",
+    images:this.dataImages
    }
 }
