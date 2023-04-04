@@ -2,7 +2,7 @@
     <div class="images-row">
         <button class="boton-lateral" *ngFor="let img of images; let i=index" (click)="setMainImage(i)"><img [src]="img"></button>
     </div>
-    <div class="main-image">
-        <img [src]="images[currentImage]" alt="">
+    <div class="main-image" (mousemove)="zoomImage($event)" (mouseleave)="restoreImage($event)">
+        <img [src]="images[currentImage]" alt="" >
     </div>
 </div>
