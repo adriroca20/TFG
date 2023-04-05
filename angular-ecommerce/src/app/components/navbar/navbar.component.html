@@ -1,0 +1,9 @@
+<div class="navbar-container">
+    <a href="">Home</a>
+    <ul>
+        <li><a href="shop">Shop</a></li>
+        <li><a href="profile">Profile</a></li>
+        <li><button (click)="openCart()">Cart</button></li>
+    </ul>
+    <ecom-preview-cart *ngIf="cartOpen" [setData]="dataPreviewCart" class="carrito"></ecom-preview-cart>
+</div>

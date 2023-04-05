@@ -1,8 +1,4 @@
-<section id="productos">
-    <app-product-card [setData]="datosProduct" (getData)="getDataProduct($event)"></app-product-card>
-    <app-search-bar [setData]="dataSearchBar" (getData)="getDataSearch($event)"></app-search-bar>
-    <!-- <app-preview-cart [setData]="dataPreviewCart" (dataEmitter)="datosRecibidos"></app-preview-cart> -->
-    <app-preview-cart [setData]="dataPreviewCart" (getData)="getDataPreview($event)"></app-preview-cart>
-    <app-image-gallery [setData]="dataImageGallery"></app-image-gallery>
-    <app-payment [setData]="dataPayment"></app-payment>
-</section>
+<app-navbar></app-navbar>
+<router-outlet>
+    
+</router-outlet>

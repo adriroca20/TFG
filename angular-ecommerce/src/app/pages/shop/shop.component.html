@@ -1,0 +1,3 @@
+<section class="shop-container">
+    <ecom-product-card *ngFor="let product of productCards" [setData]="product" (getData)="getDataProduct($event)"></ecom-product-card>
+</section>

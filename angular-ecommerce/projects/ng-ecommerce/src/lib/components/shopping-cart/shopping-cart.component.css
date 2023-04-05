@@ -1,0 +1,108 @@
+.contenedor-preview-cesta{
+    min-height: 50vh;
+    background-color: white;
+    border: 1px solid black;
+    width: 80vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 5% 10% ;
+    gap: 30px;
+}
+.contenedor-preview-cesta h1{
+    align-self: flex-start;
+}
+.contenedor-preview-cesta hr{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.contenedor-producto-cesta{
+    height: 250px;
+    width: 100%;
+    display: flex;
+    background-color: #E3E3E3;
+}
+
+.contenedor-producto-cesta img{
+    height: 100%;
+    width: 30%;
+    object-fit: cover;
+}
+.contenedor-datos-producto-cesta{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 2%;
+}
+.contenedor-datos-producto-cesta a{
+    text-decoration: none;
+    color: black;
+    font-size: large;
+}
+.seccion-prod-cesta{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+}
+.boton-eliminar{
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.seccion-prod-cesta button img{
+    object-fit: contain;
+}
+.selector-cantidad{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+}
+.selector-cantidad button{
+    height: 30px;
+    width: 30px;
+    background-color: grey;
+    border-radius: 45%;
+    border-color: white;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.selector-cantidad button:hover{
+    background-color: white;
+    color: black;
+}
+.precio-articulo{
+    font-size: 30px;
+    font-weight: bold;
+}
+.present{
+    display: flex;
+    justify-content: flex-end;
+    gap: 3px;
+}
+.proceed-to-payment{
+    padding: 10px;
+    background-color: grey;
+    border-radius: 20px;
+    border-color: white;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.proceed-to-payment:hover{
+    background-color: white;
+    color: black;
+}
+
+@media (max-width: 600px){
+    
+}
