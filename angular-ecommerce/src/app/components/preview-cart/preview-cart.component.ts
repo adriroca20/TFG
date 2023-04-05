@@ -9,7 +9,7 @@ export class PreviewCartComponent {
   @Input()
   setData!:PreviewCart;
   @Output()
-  dataEmitter = new EventEmitter<any>();
+  getData = new EventEmitter<any>();
   cantidad:Array<number>= []
   dataToEmit!:PreviewCart;
   ngOnInit(){
@@ -18,6 +18,7 @@ export class PreviewCartComponent {
      });
      this.dataToEmit={
       class:this.setData.class,
+      link:this.setData.link,
       total:this.setData.total,
       products:this.setData.products
     }
@@ -27,18 +28,23 @@ export class PreviewCartComponent {
     this.dataToEmit.products.forEach((product,i) => {
       product.amount=this.cantidad[i]
    });
-    this.dataEmitter.emit(this.dataToEmit);
+    this.getData.emit(this.dataToEmit);
   }
   masCantidad(i:number){
     this.cantidad[i]+=1;
+    this.dataToEmit.products[i].amount=this.cantidad[i];
+    this.getData.emit(this.dataToEmit);
   }
   menosCantidad(i:number){
     if(this.cantidad[i]>1){
       this.cantidad[i]-=1;
+      this.dataToEmit.products[i].amount=this.cantidad[i];
+      this.getData.emit(this.dataToEmit);
     }
   }
   eliminarProducto(i:number){
     this.setData.products.splice(i,1)
+    this.dataToEmit.products=this.setData.products
+    this.getData.emit(this.dataToEmit);
   }
-  
 }

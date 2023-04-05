@@ -29,13 +29,14 @@ interface productCart{
 }
 interface PreviewCart{
     class:string,
+    link:string,
     total:string,
     products:Array<PreviewProductCart>
 }
 interface PreviewProductCart{
     image:string,
-    price:string,
     link:string,
+    price:string,
     amount:number
 }
 interface imageGallery{

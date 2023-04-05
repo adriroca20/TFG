@@ -56,6 +56,7 @@ export class AppComponent {
   
   dataPreviewCart:PreviewCart={
     class:"sm",
+    link:"",
     total:"60€",
     products:this.products
   }
