@@ -1,1 +1,12 @@
-<p>product-info works!</p>
+<div class="contenedor-producto">
+    <ecom-image-gallery [setData]="galleryData"></ecom-image-gallery>
+    <div class="contenedor-datos-producto">
+        <div class="datos-producto">
+            <h1>{{dataProduct.title}}</h1>
+            <h3>{{dataProduct.price}}</h3>
+            <p>{{dataProduct.description}}</p>
+        </div>
+        <button (click)="addToCart()">Add to cart</button>
+    </div>
+
+</div>

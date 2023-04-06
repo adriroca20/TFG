@@ -1,5 +1,5 @@
 .contenedor-preview-cesta{
-    min-height: 50vh;
+    height: 60vh;
     background-color: white;
     border: 1px solid black;
     width: 80vw;
@@ -9,6 +9,7 @@
     flex-direction: column;
     padding: 5% 10% ;
     gap: 30px;
+    overflow: scroll;
 }
 .contenedor-preview-cesta h1{
     align-self: flex-start;

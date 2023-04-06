@@ -4,6 +4,7 @@ import { LandingComponent } from './pages/landing/landing.component';
 import { PaymentComponent } from './pages/payment/payment.component';
 import { ShopComponent } from './pages/shop/shop.component';
 import { ProductInfoComponent } from './pages/product-info/product-info.component';
+import { InDevelopmentComponent } from './components/in-development/in-development.component';
 const routes: Routes = [
   {
     path:"", 
@@ -19,9 +20,13 @@ const routes: Routes = [
     component:ShopComponent
   }  ,
   {
-    path:"product-info:id", 
+    path:"product-info/:id", 
     component:ProductInfoComponent
-  }
+  },
+  {
+    path:"profile", 
+    component:InDevelopmentComponent
+  } 
 ];
 
 @NgModule({

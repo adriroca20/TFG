@@ -13,14 +13,15 @@ const httpOptions = {
 })
 
 export class productsService {
-  // https://api.artic.edu/api/v1/artworks
-  // https://api.escuelajs.co/api/v1/products
-  private apiUrl= "https://fakestoreapi.com/products";
+  private apiUrl= "https://fakestoreapi.com/products/";
 
 
   constructor(private http:HttpClient){}
 
   getProducts() :Observable<any[]>{
     return this.http.get<any[]>(this.apiUrl);
+  }
+  getProductWithID(id:string) :Observable<any[]>{
+    return this.http.get<any[]>(this.apiUrl + id);
   }
 }

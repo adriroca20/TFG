@@ -10,13 +10,15 @@ import { LandingComponent } from './pages/landing/landing.component';
 import { ShopComponent } from './pages/shop/shop.component';
 import { ProductInfoComponent } from './pages/product-info/product-info.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { InDevelopmentComponent } from './components/in-development/in-development.component';
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
     ShopComponent,
     ProductInfoComponent,
-    NavbarComponent
+    NavbarComponent,
+    InDevelopmentComponent
   ],
   imports: [
     BrowserModule,

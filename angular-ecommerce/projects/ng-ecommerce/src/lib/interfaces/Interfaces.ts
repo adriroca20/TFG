@@ -3,7 +3,7 @@ interface ProductCard{
     name: string,
     price: string,
     image:string,
-    link: string
+    link: any
 }
 interface SearchBar{
     class: string,

@@ -2,7 +2,14 @@
     margin-top: 80px;
     width: 100%;
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     flex-wrap: wrap;
     min-height: 100vh;
     gap: 20px;
+}
+@media (max-width: 600px){
+    .shop-container{
+    justify-content: center;
+    }
 }

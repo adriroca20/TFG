@@ -12,6 +12,8 @@ export class PreviewCartComponent {
   getData = new EventEmitter<any>();
   cantidad:Array<number>= []
   dataToEmit!:PreviewCart;
+
+
   ngOnInit(){
      this.setData.products.forEach(product => {
         this.cantidad.push(product.amount)

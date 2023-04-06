@@ -1,0 +1,35 @@
+.contenedor-producto{
+    padding-top: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 800px;
+    height: 70vh;
+}
+.contenedor-datos-producto{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 70%;
+    width: 40%;
+    gap: 10px;
+}
+.contenedor-datos-producto p{
+    padding-top: 20px;
+}
+.contenedor-datos-producto button{
+    background-color: transparent;
+    width: 50%;
+    height: 50px;
+    border-radius: 7px;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.3rem;
+    box-shadow: 2px 2px 20px 2px;
+    cursor: pointer;
+}
+.contenedor-datos-producto button:hover{
+    background-color: black;
+    color: white;
+    box-shadow: 2px 2px 2px 2px;
+}
