@@ -10,6 +10,8 @@
     flex-direction: column;
     padding: 5% 10% ;
     gap: 10px;
+    height: 600px;
+    overflow-y: scroll;
 }
 .contenedor-preview-cesta > hr{
     width: 100%;

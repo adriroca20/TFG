@@ -1,4 +1,4 @@
-import { Component, Input, HostListener} from '@angular/core';
+import { Component, Input, HostListener, OnInit} from '@angular/core';
 import { imageGallery } from '../../interfaces/Interfaces';
 
 @Component({
@@ -6,7 +6,7 @@ import { imageGallery } from '../../interfaces/Interfaces';
   templateUrl: './image-gallery.component.html',
   styleUrls: ['./image-gallery.component.css']
 })
-export class ImageGalleryComponent {
+export class ImageGalleryComponent implements OnInit{
   @Input()
   setData!:imageGallery;
   images:Array<string>=[];
@@ -37,10 +37,7 @@ export class ImageGalleryComponent {
   ngOnInit(){
     this.mainImage=document.querySelectorAll(".main-image")[0]
     this.mainImage.addEventListener
-    console.log(this.mainImage)
-    this.setData.images.forEach(image => {
-      this.images.push(image)
-    });
+    this.images= this.setData.images
   }
   setMainImage(i:number){
     this.currentImage=i;

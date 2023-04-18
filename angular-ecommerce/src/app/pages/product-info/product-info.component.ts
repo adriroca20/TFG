@@ -33,7 +33,6 @@ export class ProductInfoComponent {
         class:"",
         images:[product.image]
       }
-      console.log(this.galleryData)
     });
   }
   addToCart() : void{
@@ -45,8 +44,6 @@ export class ProductInfoComponent {
       link: this.router.url,
       amount: 1
     }
-    this.cartService.getProductCartData().products.push(dataProductToAdd);
-
-    console.log(this.cartService.getProductCartData());
+    this.cartService.addProduct(dataProductToAdd)
   }
 }

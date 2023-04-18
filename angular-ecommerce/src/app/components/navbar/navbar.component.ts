@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PreviewCart } from 'src/app/interfaces/Interfaces';
 import { CartService } from 'src/app/services/cart.service';
 
@@ -7,20 +7,16 @@ import { CartService } from 'src/app/services/cart.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {
+export class NavbarComponent{
   constructor(private cartService: CartService){}
-  dataPreviewCart:PreviewCart={
-    class:"",
-    link:"",
-    total:"60€",
-    products:[]
+  get dataPreviewCart(){
+    return this.cartService.dataProductCart;
   }
   cartOpen:boolean=false;
   openCart(){
     this.cartOpen=!this.cartOpen;
-    console.log(this.cartService.getProductCartData());
   }
-  ngOnInit():void{
-    this.dataPreviewCart.products = this.cartService.getProductCartData().products;
+  changeProduct(event:PreviewCart){
+    this.cartService.setDataProductCart(event)
   }
 }

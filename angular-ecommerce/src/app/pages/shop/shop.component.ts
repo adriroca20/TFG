@@ -35,7 +35,7 @@ export class ShopComponent {
     });
   }
   getDataProduct(event:any){
-    this.cartService.setProductCartData(event);
+    this.cartService.addProduct(event)
    }
    sanitize(url:string){
     return this.sanitizer.bypassSecurityTrustUrl(url);
