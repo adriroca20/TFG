@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter,OnInit} from '@angular/core';
 import { PreviewCart } from '../../interfaces/Interfaces';
+import { DomSanitizer } from '@angular/platform-browser';
 @Component({
   selector: 'ecom-preview-cart',
   templateUrl: './preview-cart.component.html',
@@ -13,7 +14,8 @@ export class PreviewCartComponent {
   cantidad:Array<number>= []
   dataToEmit!:PreviewCart;
 
-
+  constructor(private sanitizer:DomSanitizer){
+  }
   ngOnInit(){
      this.setData.products.forEach(product => {
         this.cantidad.push(product.amount)

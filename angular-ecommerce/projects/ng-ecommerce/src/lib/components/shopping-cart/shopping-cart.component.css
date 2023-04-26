@@ -23,6 +23,7 @@
     width: 100%;
     display: flex;
     background-color: #E3E3E3;
+    justify-content: space-between;
 }
 
 .contenedor-producto-cesta img{
@@ -36,6 +37,7 @@
     align-items: flex-start;
     flex-direction: column;
     padding: 2%;
+    width: 60%;
 }
 .contenedor-datos-producto-cesta a{
     text-decoration: none;

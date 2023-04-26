@@ -4,7 +4,7 @@
     <div *ngFor="let product of setData.products; let i=index" class="contenedor-producto-cesta">
         <img [src]="product.image" alt="image-product">
         <div class="contenedor-datos-producto-cesta">
-            <a [href]="product.link">{{product.productName}}</a>
+            <a [routerLink]="product.link">{{product.productName}}</a>
             <div class="seccion-prod-cesta">
                 <div class="present">
                     <input  name="present" type="checkbox">

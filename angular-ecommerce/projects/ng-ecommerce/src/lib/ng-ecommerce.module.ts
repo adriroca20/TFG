@@ -7,7 +7,7 @@ import { PreviewCartComponent } from './components/preview-cart/preview-cart.com
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { NgStyle, NgClass } from '@angular/common';
-
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     ImageGalleryComponent,
@@ -20,7 +20,8 @@ import { NgStyle, NgClass } from '@angular/common';
   imports: [
     NgStyle,
     NgClass,
-    BrowserModule
+    BrowserModule,
+    RouterModule
   ],
   exports: [
     ImageGalleryComponent,

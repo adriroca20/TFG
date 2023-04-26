@@ -4,10 +4,10 @@
         <hr>
         <p>{{setData.total}}</p>
     </div>
-    <a [href]="setData.link" target="_blank">Pay now</a>
+    <a [routerLink]="setData.link">Pay now</a>
     <hr>
     <div *ngFor="let product of setData.products; let i=index" class="contenedor-producto-cesta">
-        <a [href]="product.link"><img [src]="product.image" alt="image-product"></a>
+        <a [routerLink]="product.link"><img [src]="product.image" alt="image-product"></a>
             <div class="seccion-prod-prev-cesta">
                 <div class="selector-cantidad">
                     <button (click)="menosCantidad(i)">-</button>

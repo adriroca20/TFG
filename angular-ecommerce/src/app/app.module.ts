@@ -11,6 +11,7 @@ import { ShopComponent } from './pages/shop/shop.component';
 import { ProductInfoComponent } from './pages/product-info/product-info.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { InDevelopmentComponent } from './components/in-development/in-development.component';
+import { PaymentComponent } from './pages/payment/payment.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { InDevelopmentComponent } from './components/in-development/in-developme
     ShopComponent,
     ProductInfoComponent,
     NavbarComponent,
-    InDevelopmentComponent
+    InDevelopmentComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
