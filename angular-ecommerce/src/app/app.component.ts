@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProductCard, SearchBar, PreviewCart, imageGallery, payment,PreviewProductCart } from './interfaces/Interfaces';
+import {SearchBar, PreviewCart, imageGallery, payment,Product } from './interfaces/Interfaces';
 
 @Component({
   selector: 'app-root',
@@ -8,18 +8,19 @@ import { ProductCard, SearchBar, PreviewCart, imageGallery, payment,PreviewProdu
 })
 export class AppComponent {
 
-  products:Array<PreviewProductCart> = []
+  products:Array<Product> = []
 
-  datosProduct:ProductCard={
+  datosProduct:Product={
     class:"",
-    name: "CAMISETA NIKE",
+    productName: "CAMISETA NIKE",
     price: "100€",
     image:"../../../assets/imagen-producto.png",
     link: ""
   }
   dataSearchBar:SearchBar={
     class: "",
-    categories:["zapatillas","sudaderas","pantalones","camisas"]
+    categories: ["zapatillas", "sudaderas", "pantalones", "camisas"],
+    id: 0
   }
   dataPayment:payment={
     amount:10,
@@ -28,11 +29,12 @@ export class AppComponent {
     link:"https://twitter.com"
   }
 
-  product:PreviewProductCart= {
-    amount:3,
-    image:"../../../assets/imagen-producto.png",
-    link:"https://twitter.com",
-    price:"30€"
+  product:Product= {
+    amount: 3,
+    image: "../../../assets/imagen-producto.png",
+    link: "https://twitter.com",
+    price: "30€",
+    productName: ''
   }
 
   dataImages:Array<string>=[];

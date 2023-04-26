@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter} from '@angular/core';
-import { ProductCard } from '../../interfaces/Interfaces';
+import { Product } from '../../interfaces/Interfaces';
 
 @Component({
   selector: 'ecom-product-card',
@@ -8,7 +8,7 @@ import { ProductCard } from '../../interfaces/Interfaces';
 })
 export class ProductCardComponent {
   @Input()
-  setData!:ProductCard;
+  setData!:Product;
   @Output()
   getData = new EventEmitter<any>();
 

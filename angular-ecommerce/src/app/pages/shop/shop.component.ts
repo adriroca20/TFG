@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProductCard, productCart } from 'src/app/interfaces/Interfaces';
+import { Product } from 'src/app/interfaces/Interfaces';
 import { productsService } from 'src/app/services/api-products';
 import { DomSanitizer } from '@angular/platform-browser';
 import { CartService } from 'src/app/services/cart.service';
@@ -9,7 +9,7 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./shop.component.css']
 })
 export class ShopComponent {
-  productCards:Array<ProductCard>=[]
+  productCards:Array<Product>=[]
 
   constructor(private productsService:productsService, private sanitizer:DomSanitizer,  private cartService: CartService){
   }
@@ -24,9 +24,9 @@ export class ShopComponent {
     products.forEach(product => {
       let url:string= 'product-info/' + product.id;
       // let urlSanitized:any= this.sanitize(url)
-      let prod:ProductCard={
+      let prod:Product={
         class:"",
-        name: product.title,
+        productName: product.title,
         price: product.price,
         image: product.image,
         link: url
@@ -34,7 +34,7 @@ export class ShopComponent {
       this.productCards.push(prod)
     });
   }
-  getDataProduct(event:productCart){
+  getDataProduct(event:Product){
     console.log(event)
     this.cartService.addProduct(event)
    }

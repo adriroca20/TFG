@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { productsService } from 'src/app/services/api-products';
-import { imageGallery, productCart } from 'src/app/interfaces/Interfaces';
+import { imageGallery, Product } from 'src/app/interfaces/Interfaces';
 import { CartService } from 'src/app/services/cart.service';
 @Component({
   selector: 'app-product-info',
@@ -36,7 +36,7 @@ export class ProductInfoComponent {
     });
   }
   addToCart() : void{
-    let dataProductToAdd: productCart = {
+    let dataProductToAdd: Product = {
       class: '',
       productName: this.dataProduct.title,
       image:  this.dataProduct.image,

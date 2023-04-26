@@ -18,7 +18,7 @@ export class PreviewCartComponent {
   }
   ngOnInit(){
      this.setData.products.forEach(product => {
-        this.cantidad.push(product.amount)
+        this.cantidad.push(product.amount || 0)
      });
      this.dataToEmit={
       class:this.setData.class,

@@ -30,6 +30,7 @@
     height: 100%;
     width: 30%;
     object-fit: cover;
+    object-position: top;
 }
 .contenedor-datos-producto-cesta{
     display: flex;

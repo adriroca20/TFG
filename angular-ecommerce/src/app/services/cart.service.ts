@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Cart, PreviewCart, PreviewProductCart, productCart } from "../interfaces/Interfaces";
+import { PreviewCart, Product } from "../interfaces/Interfaces";
 import { DomSanitizer } from "@angular/platform-browser";
 
 @Injectable({
@@ -13,7 +13,7 @@ export class CartService{
         link: "payment",
         total: ""
     }
-    private _products:productCart[]=[]
+    private _products:Product[]=[]
 
     constructor(private sanitizer:DomSanitizer){
         if(!localStorage.getItem("productData")){return}
@@ -32,20 +32,21 @@ export class CartService{
     get totalPrice(){
         let price=0
         this._dataProductCart.products.forEach((p)=>{
-            price += +p.price * p.amount
+            price += +p.price * (p.amount || 0)
         })
         return price.toFixed(2)
     }
 
-    addProduct(product:productCart){
+    addProduct(product:Product){
         // console.log(this.sanitize(product.link).toString())
         
         this._products.push(product)
-        let productPreview:PreviewProductCart={
+        let productPreview:Product={
             image: product.image,
             link: product.link,
             price: product.price,
-            amount: 1
+            amount: 1,
+            productName: ""
         }
         let aux:number[] = this._dataProductCart.products.reduce((arr:number[], e, i)=>{
             if (e.link == product.link) arr.push(i);
@@ -53,7 +54,10 @@ export class CartService{
         },[])
         if(aux.length>0){
             let indiceProducto = aux[0]
-            this._dataProductCart.products[indiceProducto].amount+=1
+            const prod= this._dataProductCart.products[indiceProducto]
+            if(prod.amount){
+                prod.amount+=1
+            }
         }
         else{
             this._dataProductCart.products.push(productPreview);
