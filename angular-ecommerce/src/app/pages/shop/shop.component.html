@@ -1,3 +1,6 @@
 <section class="shop-container">
-    <ecom-product-card *ngFor="let product of productCards" [setData]="product" (getData)="getDataProduct($event)"></ecom-product-card>
+    <ecom-search-bar [setData]="searchBarData" class="search-bar" (getData)="getDataSearchBar($event)"></ecom-search-bar>
+    <div class="products-container">
+        <ecom-product-card *ngFor="let product of productCards" [setData]="product" (getData)="getDataProduct($event)"></ecom-product-card>
+    </div>
 </section>

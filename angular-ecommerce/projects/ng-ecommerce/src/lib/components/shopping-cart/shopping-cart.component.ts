@@ -6,7 +6,7 @@ import { Cart } from '../../interfaces/Interfaces';
   templateUrl: './shopping-cart.component.html',
   styleUrls: ['./shopping-cart.component.css']
 })
-export class ShoppingCartComponent {
+export class ShoppingCartComponent implements OnInit{
   @Input()
   setData!:Cart;
   @Output()
@@ -33,8 +33,6 @@ export class ShoppingCartComponent {
   }
   masCantidad(i:number){
     this.cantidad[i]+=1;
-    // console.log(this.cantidad)
-
   }
   menosCantidad(i:number){
     if(this.cantidad[i]>0){

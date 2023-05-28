@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Product } from 'src/app/interfaces/Interfaces';
+import { SearchBar } from 'dist/ng-ecommerce/lib/interfaces/Interfaces';
 import { productsService } from 'src/app/services/api-products';
 import { DomSanitizer } from '@angular/platform-browser';
 import { CartService } from 'src/app/services/cart.service';
@@ -10,7 +11,10 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class ShopComponent {
   productCards:Array<Product>=[]
-
+  searchBarData:SearchBar={
+    class: " ",
+    categories: ["Ropa", "Baterías", "Cocina", "Muebles", "Oficina", "Viaje", "Productos para mascotas"],
+  }
   constructor(private productsService:productsService, private sanitizer:DomSanitizer,  private cartService: CartService){
   }
 
@@ -23,7 +27,6 @@ export class ShopComponent {
   parseDataProducts(products:any[]){
     products.forEach(product => {
       let url:string= 'product-info/' + product.id;
-      // let urlSanitized:any= this.sanitize(url)
       let prod:Product={
         class:"",
         productName: product.title,
@@ -35,10 +38,12 @@ export class ShopComponent {
     });
   }
   getDataProduct(event:Product){
-    console.log(event)
     this.cartService.addProduct(event)
    }
    sanitize(url:string){
     return this.sanitizer.bypassSecurityTrustUrl(url);
+  }
+  getDataSearchBar(data:any){
+  //  ...
   }
 }

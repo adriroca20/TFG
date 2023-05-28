@@ -36,11 +36,14 @@ export class CartService{
         })
         return price.toFixed(2)
     }
-
+    get numberOfProducts(){
+        let number=0;
+        this._dataProductCart.products.forEach((p)=>{
+            number+=(p.amount || 0)
+        })
+        return number;
+    }
     addProduct(product:Product){
-        // console.log(this.sanitize(product.link).toString())
-        
-        this._products.push(product)
         let productPreview:Product={
             image: product.image,
             link: product.link,
@@ -55,24 +58,29 @@ export class CartService{
         if(aux.length>0){
             let indiceProducto = aux[0]
             const prod= this._dataProductCart.products[indiceProducto]
-            if(prod.amount){
-                prod.amount+=1
+            const prodCart =  this._products[indiceProducto]
+            console.log(this._products)
+            console.log(indiceProducto)
+            if(prod.amount ){
+                prod.amount+=1;
+                prodCart.amount= prod.amount
             }
         }
         else{
             this._dataProductCart.products.push(productPreview);
+            this._products.push(product)
         }
         this._dataProductCart.total=this.totalPrice.toString()
         localStorage.setItem("productData", JSON.stringify(this._dataProductCart));
         localStorage.setItem("cartProducts", JSON.stringify(this._products));
     }
     setDataProductCart(data:PreviewCart){
-        // data.products.forEach(product=>{
-        //     product.link=this.sanitizer.bypassSecurityTrustUrl(product.link).toString();
-        // })
+        console.log(data)
+        this._products=data.products;
         this._dataProductCart=data;
         this._dataProductCart.total=this.totalPrice.toString()
         localStorage.setItem("productData", JSON.stringify(this._dataProductCart));
+        localStorage.setItem("cartProducts", JSON.stringify(this._products));
     }
     sanitize(url:string){
         return this.sanitizer.bypassSecurityTrustUrl(url);

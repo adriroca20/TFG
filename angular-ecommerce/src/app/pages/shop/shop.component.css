@@ -4,9 +4,20 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    flex-direction: column;
+}
+.products-container{
+    margin-top: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     flex-wrap: wrap;
     min-height: 100vh;
     gap: 20px;
+}
+.search-bar{
+    z-index: 100;
 }
 @media (max-width: 600px){
     .shop-container{

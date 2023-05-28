@@ -12,8 +12,9 @@
     align-items: center;
     flex-direction: column;
     padding: 20px;
-    background-color: white;
+    background-color: #414141;
     box-shadow: 5px 5px 20px black;
+    font-size: 1.4rem;
 }
 .payment-section{
     display: flex;
@@ -26,17 +27,17 @@
 }
 .payment-container a{
     text-decoration: none;
-    border: 1px solid black;
+    border: 1px solid white;
     background-color: transparent;
-    color: #148EFF;
+    color: white;
     border-radius: 20px;
-    padding: 10px;
+    padding: 10px 20px;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
 }
 .payment-container a:hover{
-    background-color: #148EFF;
-    color: white;
+    background-color: white;
+    color: black;
 }
 
 @media (max-width: 600px){

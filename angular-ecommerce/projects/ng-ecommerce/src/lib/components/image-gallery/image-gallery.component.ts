@@ -1,5 +1,5 @@
 import { Component, Input, HostListener, OnInit} from '@angular/core';
-import { imageGallery } from '../../interfaces/Interfaces';
+import { ImageGallery } from '../../interfaces/Interfaces';
 
 @Component({
   selector: 'ecom-image-gallery',
@@ -8,7 +8,7 @@ import { imageGallery } from '../../interfaces/Interfaces';
 })
 export class ImageGalleryComponent implements OnInit{
   @Input()
-  setData!:imageGallery;
+  setData!:ImageGallery;
   images:Array<string>=[];
   currentImage:number=0;
   mainImage!:any

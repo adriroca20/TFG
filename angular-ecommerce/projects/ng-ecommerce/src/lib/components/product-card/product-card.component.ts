@@ -10,7 +10,7 @@ export class ProductCardComponent {
   @Input()
   setData!:Product;
   @Output()
-  getData = new EventEmitter<any>();
+  getData = new EventEmitter<Product>();
 
   emitData(){
     this.getData.emit(this.setData);

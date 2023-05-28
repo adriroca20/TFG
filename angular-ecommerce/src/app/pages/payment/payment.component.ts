@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Cart } from 'src/app/interfaces/Interfaces';
+import { Payment } from 'dist/ng-ecommerce/lib/interfaces/Interfaces';
 import { CartService } from 'src/app/services/cart.service';
 @Component({
   selector: 'app-payment',
@@ -7,10 +8,7 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./payment.component.css']
 })
 export class PaymentComponent{
-  // dataCart:Cart = {
-  //   class: '',
-  //   products: []
-  // }
+
   constructor(private cartService: CartService){}
   get dataCart(){
     let data:Cart={
@@ -19,5 +17,13 @@ export class PaymentComponent{
     }
     data.products= this.cartService.cartProducts
     return data
+  }
+  get dataPayment(){
+    let data:Payment={
+      link: '',
+      amount:  this.cartService.numberOfProducts,
+      price: this.cartService.totalPrice
+    }
+    return data;
   }
 }
